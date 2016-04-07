@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1400073174 source:k:\phase1\id.cpp
+	"ID.h"
+	<iostream>
+	<stdlib.h>
+
+1400074096 k:\phase1\id.h
+	<iostream>
+	<stdlib.h>
+
+1401304198 source:k:\phase1\litob.cpp
+	"LitOb.h"
+
+1401220400 k:\phase1\litob.h
+
+1401475500 source:k:\phase1\main.cpp
+	"ID.h"
+	"symOb.h"
+	"LitOb.h"
+	<map>
+	<string>
+	<sstream>
+	<stdio.h>
+	<windows.h>
+	<vector>
+	<exception>
+	<stack>
+	<queue>
+	<cctype>
+	<iomanip>
+
+1400077272 k:\phase1\symob.h
+
+1400097682 source:k:\phase1\symob.cpp
+	"symOb.h"
+
+1400073174 source:d:\c++\phase1\id.cpp
+	"ID.h"
+	<iostream>
+	<stdlib.h>
+
+1400074096 d:\c++\phase1\id.h
+	<iostream>
+	<stdlib.h>
+
+1401304198 source:d:\c++\phase1\litob.cpp
+	"LitOb.h"
+
+1401220400 d:\c++\phase1\litob.h
+
+1400097682 source:d:\c++\phase1\symob.cpp
+	"symOb.h"
+
+1400077272 d:\c++\phase1\symob.h
+
+1401578975 source:d:\c++\phase1\main.cpp
+	"ID.h"
+	"symOb.h"
+	"LitOb.h"
+	<map>
+	<string>
+	<sstream>
+	<stdio.h>
+	<windows.h>
+	<vector>
+	<exception>
+	<stack>
+	<queue>
+	<cctype>
+	<iomanip>
+
+1400073174 source:d:\c++\assembler\id.cpp
+	"ID.h"
+	<iostream>
+	<stdlib.h>
+
+1400074096 d:\c++\assembler\id.h
+	<iostream>
+	<stdlib.h>
+
+1401304198 source:d:\c++\assembler\litob.cpp
+	"LitOb.h"
+
+1401220400 d:\c++\assembler\litob.h
+
+1400097682 source:d:\c++\assembler\symob.cpp
+	"symOb.h"
+
+1400077272 d:\c++\assembler\symob.h
+

@@ -1,0 +1,95 @@
+Output
+#     Address  Label      Mnemonic    Operand                       Comments 
+               .BUBBLE SORT
+               .TEMP = T
+               .2345678901234567890123
+1     001000   BUBBLE     START       1000                          
+               .LTORG
+2     001000              BASE        TEMP                          
+3     001000              LDA         TEMP                          
+4     001003              LDA         #0                            
+5     001006              LDT         #0                            
+6     001009              LDX         #0                            
+7     00100c              LDS         #0                            
+8     00100f   ONE        RESW        10                            
+9     00102d   TWO        RESB        100                           
+               .
+10    001091   ILOOP      LDX         #0                            
+11    001094              STX         =c'asda'                      
+               .
+12    001097   JLOOP      LDX         3**+ILOOP+*                   
+13    00109a              LDCH        STR+1,X                       
+               .LTORG
+14    00109d              RMO         A,S                           
+15    00109f   THREE      RESW        10                            
+16    0010bd              LDCH        STR,X                         
+17    0010c0              COMPR       A,S                           
+               .SHE      EQU     TAR
+18    0010c2   DAS        EQU         TAR-JLOOP                     
+                          Error:*** invalid operand
+19    0010c2   DAS        EQU         TAR-JLOOP                     
+               .ASDA   EQU *
+20    0010c2   D          EQU         TAR-TAR                       
+                          Error:*** invalid operand
+21    0010c2   D          EQU         TAR-TAR                       
+22    0010c2   YY         EQU         3*TAR-3*TAR+100-40            
+                          Error:*** invalid operand
+23    0010c2   YY         EQU         3*TAR-3*TAR+100-40            
+24    0010c2              JGT         JSWAP                         
+25    0010c5              J           BREAK                         
+26    0010c8   JSWAP      JSUB        SWAP                          
+               .
+27    0010cb   BREAK      LDX         LNGTH                         
+28    0010ce              LDT         =X'1234'                      
+29    0010d1              SUBR        X,T                           
+30    0010d3              LDX         JJJ                           
+31    0010d6              TIXR        T                             
+32    0010d8              STX         JJJ                           
+33    0010db              JLT         JLOOP                         
+               .
+34    0010de              LDX         III                           
+35    0010e1              TIX         LNGTH                         
+36    0010e4              STX         III                           
+37    0010e7              JLT         ILOOP                         
+38    0010ea              J           HALT                          
+               .
+39    0010ed   SWAP       LDX         JJJ                           
+40    0010f0              LDCH        STR,X                         
+41    0010f3              STCH        TEMHP                         
+42    0010f6              LDCH        STR+1,X                       
+43    0010f9              STCH        STR,X                         
+44    0010fc              LDCH        TEMP                          
+45    0010ff              STCH        STR+1,X                       
+46    001102              RSUB                                      
+47    001105   HALT       J           *                             
+48    001108   III        WORD        0                             
+49    00110b   JJJ        WORD        0                             
+50    00110e   LNGTH      WORD        4                             
+51    001111   LNGTH2     WORD        3                             
+52    001114   TEMP       RESB        1                             
+53    001115              END                                       
+      001115              =C'ASDA'                                  
+      001119              =X'1234'                                  
+>>  Incomplete   p a s s   1 
+>>  *****************************************************************************************
+>>  *****************************************************************************************
+>>  s y m b o l     t a b l e   (values in Hexa.)
+     Name        value       Absol/Reloc
+     -----------------------------------
+     BREAK       10cb        Relocatable
+     D           ffffffff    Relocatable
+     DAS         ffffffff    Relocatable
+     HALT        1105        Relocatable
+     III         1108        Relocatable
+     ILOOP       1091        Relocatable
+     JJJ         110b        Relocatable
+     JLOOP       1097        Relocatable
+     JSWAP       10c8        Relocatable
+     LNGTH       110e        Relocatable
+     LNGTH2      1111        Relocatable
+     ONE         100f        Relocatable
+     SWAP        10ed        Relocatable
+     TEMP        1114        Relocatable
+     THREE       109f        Relocatable
+     TWO         102d        Relocatable
+     YY          ffffffff    Relocatable

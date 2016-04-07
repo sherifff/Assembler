@@ -1,0 +1,62 @@
+.bubble sort
+.temp = t
+.2345678901234567890123
+bubble   START   1000
+         .LTORG
+         base    temp
+         LDA     temp
+         LDA     #0
+         LDT     #0
+         LDX     #0
+         LDS     #0
+one      RESW    10
+TWO      RESB    100
+.
+iLOOP    LDX     #0
+         STX     =c'asda'
+.
+jLOOP    LDX     3**+iloop+*
+         LDCH    STR+1,X
+         .LTORG
+         RMO     A,S
+THREE    RESW    10
+         LDCH    STR,X
+         COMPR   A,S
+.she      equ     tar
+das      equ   tar-jloop
+.asda   equ *
+d       equ      tar-tar
+yy        equ     3*tar-3*tar+100-40
+         JGT     JSWAP
+         J       BREAK
+JSWAP    JSUB    SWAP
+.
+BREAK    LDX     LNGTH
+         LDT     =X'1234'
+         SUBR    X,T
+         LDX     jjj
+         TIXR    T
+         STX     jjj
+         JLT     jLOOP
+.
+         LDX     iii
+         TIX     LNGTH
+         STX     iii
+         JLT     iLOOP
+         J       HALT
+.
+SWAP     LDX     jjj
+         LDCH    STR,X
+         STCH    TEMhP
+         LDCH    STR+1,X
+         STCH    STR,X
+         LDCH    TEMP
+         STCH    STR+1,X
+         RSUB
+HALT     J       *
+iii      WORD    0
+jjj      WORD    0
+LNGTH    WORD    4
+LNGTH2   WORD    3
+TEMP     RESB    1
+         END

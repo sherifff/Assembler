@@ -1,0 +1,22 @@
+.23456789012345678901234567890123456
+TEST     START   1000
+READ     +LDX        =X'f7'
+READ2    +LDX        #5
+   ARR          RESB        100
+Q            RESB        10
+U         RESW        1
+END             RESB        6
+              STCH       RECORD,x
+RLOOP    TD                   INDEV
+       +JEQ             RLOOP                        ndnsjsjndjsnd
+         RD           INDEV
+         TIX   K100
+         JLT                                RLOOP,X
+INDEV    BYtE                               X'F3'
+RECORD   RESB                                              1000
+ZERO     WORD      0                        HJAGJDHFJSDHFGSJDFHS
+                       rr       equ        *
+wewew      equ            rloop
+          K100        WORD        100
+     TTT         BYTE        X'0011'
+   END
